@@ -1,5 +1,6 @@
 import { Button, Grid } from "@mui/material";
 import { LOGOUT } from "../../../utils/constants";
+import { useLocation } from "react-router-dom";
 
 interface HeaderProps {
   primaryButtonText: String;
@@ -16,6 +17,10 @@ const Header = ({
   handleSecondaryBtnClick,
   handleLogout,
 }: HeaderProps) => {
+  const location = useLocation();
+
+  const isPrimaryActive = location.pathname === "/";
+  const isSecondaryActive = location.pathname === "/employeeManagement";
   return (
     <>
       <Grid container spacing={2} justifyContent={"space-between"}>
@@ -23,7 +28,7 @@ const Header = ({
           <Grid container spacing={2}>
             <Grid item>
               <Button
-                variant="contained"
+                variant={isPrimaryActive ? "contained" : "outlined"}
                 color="primary"
                 onClick={handlePrimaryBtnClick}
               >
@@ -32,7 +37,7 @@ const Header = ({
             </Grid>
             <Grid item>
               <Button
-                variant="contained"
+                variant={isSecondaryActive ? "contained" : "outlined"}
                 color="primary"
                 onClick={handleSecondaryBtnClick}
               >

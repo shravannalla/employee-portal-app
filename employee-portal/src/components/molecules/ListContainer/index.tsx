@@ -6,7 +6,6 @@ interface ListContainerProps {
 }
 
 const TextWrapper = styled(Grid)({
-  bgcolor: "#252925",
   borderRadius: "8px",
   padding: "8px",
 });
@@ -17,7 +16,7 @@ const ListContainer = ({ list }: ListContainerProps) => {
       <Grid container display={"flex"} flexDirection={"column"} gap={1}>
         {list &&
           list.map((item, index) => (
-            <TextWrapper item key={index}>
+            <TextWrapper item key={index} bgcolor="#252925">
               <Typography children={item.name} variant="h6" />
             </TextWrapper>
           ))}

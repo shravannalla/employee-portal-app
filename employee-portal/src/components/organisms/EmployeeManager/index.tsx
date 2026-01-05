@@ -76,7 +76,7 @@ const EmployeeManager = () => {
               {editingIndex !== null && (
                 <Button
                   variant="outlined"
-                  color="secondary"
+                  color="primary"
                   sx={{ height: "3.4rem" }}
                   onClick={handleCancel}
                 >
