@@ -1,0 +1,11 @@
+export const RECENT_EMPLOYEES = "Recently joined employees:";
+export const EMPLOYEE_COUNT = "Total employees:";
+export const LOGOUT = "Logout";
+export const LOGIN = "Login";
+export const LOGGING_IN = "Logging in...";
+export const EMAIL_REQUIRED = "Email is required";
+export const VALID_EMAIL = "Please enter a valid email";
+export const PASSWORD_REQUIRED = "Password is required";
+export const LOGIN_FAILED = "Login failed. Please try again.";
+export const DASHBOARD = "Dashboard";
+export const MANAGE_EMPLOYEES = "Manage Employees";
